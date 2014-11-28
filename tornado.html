@@ -1,0 +1,30 @@
+<head>
+  <title>tornado sensor monitor</title>
+</head>
+
+<body>
+  <h1>Welcome to tornado sensor monitor</h1>
+
+  {{> home}}
+</body>
+
+<template name="home">
+  <div class="sensors">
+    <table>
+      <tr>
+        <th>time</th>
+        <th>voltage</th>
+        <th>voltage_flag</th>
+        <th>motion_flag</th>
+      </tr>
+    </table>
+    {{#each sensors}}
+      <tr class="sensor">
+        <td>{{time}}</td>
+        <td>{{voltage}}</td>
+        <td>{{voltage_flag}}</td>
+        <td>{{motion}}</td>
+      </tr>
+    {{/each}}
+  </div>
+</template>
