@@ -39,4 +39,5 @@ if (Meteor.isClient) {
   Template.home.sensors = function() {
     return Sensors.find({}, {sort:{time:-1}});
   };
+
 }
